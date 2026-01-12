@@ -1,0 +1,66 @@
+.Thumbnail{
+    width: 100%;
+    /* display: block; */
+    border-radius: 12px;
+}
+
+.vid-title{
+    /* width: 300px; */
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-top: 7px;
+}
+
+.vid-author{
+    margin-bottom: 6px;
+}
+
+.vid-author,
+.vid-stats{
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+/* When we reduce size of our page (max 750px) Then 2 videos will appear */
+@media (min-width: 751px) and (max-width: 1200px)  {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.thumbnail-row {
+  position: relative;
+}
+/*
+ Relative = parent position; absolute = child position; child always stays at given values inside parent.
+ Here, thumbnail-row is parent so andha parent la child vid-time given value vodaya position la irukum
+*/
+.vid-time {
+
+  position: absolute;
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 500;
+
+  padding: 4px 10px;    /* vertical horizontal */
+  bottom: 8px;
+  right: 6px;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+}
